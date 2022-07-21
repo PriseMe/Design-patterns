@@ -20,7 +20,7 @@ class Singletob07 {
 
     }
 
-    //2.本类内部创建对象实例 加入volatile 推荐
+    //2.本类内部创建对象实例 加入volatile 推荐 //volatile 可以及时看到其他线程对变量的改变
     private static volatile Singletob07 instance ;
 
     //写一个静态内部类 该类中有一个静态属性
@@ -29,7 +29,7 @@ class Singletob07 {
     }
     //3.提供一个公有的静态方法
     //加入了同步处理方法
-    public static Singletob07 getInstance(){
+    public static synchronized Singletob07 getInstance(){
         return SingletonInstace.instance;
     }
 

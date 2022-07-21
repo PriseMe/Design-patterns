@@ -26,7 +26,7 @@ class Singletob06 {
 
     //3.提供一个公有的静态方法
     //加入了同步处理方法
-    public static Singletob06 getInstance(){
+    public static synchronized Singletob06 getInstance(){
         //用到的时候再去创建
         if (instance == null) {
 
